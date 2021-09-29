@@ -51,15 +51,15 @@
 
 ;;(unpin! org-roam)
 
-(package! org-clock-convenience)
-(package! company-posframe)
+;;(package! org-clock-convenience)
+;;(package! company-posframe)
 (package! org-roam
   :recipe (:host github :repo "org-roam/org-roam"))
 (package! ox-hugo)
-(package! git-link)
-(package! yaml-mode)
-(package! emmet-mode)
-(package! citeproc-org)
+;;(package! git-link)
+;;(package! yaml-mode)
+;;(package! emmet-mode)
+;;(package! citeproc-org)
 (package! dash)
 (package! simple-httpd)
 (package! org-present)

@@ -128,8 +128,16 @@
   (defun fabien/update-agenda-files-with-dailies ()
     (interactive)
     ;;remove daily from agenda files
-    (setq org-agenda-files (cl-remove-if (lambda (k) (string-match (concat ".*" org-roam-dailies-directory ".*") k)) org-agenda-files))
+    (setq org-agenda-files
+          (cl-remove-if
+           (lambda (k) (string-match
+                        (concat ".*" org-roam-dailies-directory ".*")
+                        k))
+           org-agenda-files
+           )
+          )
     (setq dailies_counter 0)
+    ;; select existing dailies in the next 30 days
     (while (< dailies_counter 30)
       (setq daily_path
           (format-time-string
